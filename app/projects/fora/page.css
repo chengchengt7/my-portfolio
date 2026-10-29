@@ -1,0 +1,173 @@
+.fora-case-study {
+  margin-block-end: 4rem;
+
+  .fora-back {
+    display: inline-block;
+    padding-block: 0.75rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+  }
+
+  .fora-eyebrow {
+    margin-block: 3rem 1rem;
+    color: var(--color600);
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin-block-end: 1.5rem;
+  }
+
+  h2,
+  p,
+  .fora-logo {
+    max-width: 44rem;
+    margin-inline: auto;
+  }
+
+  .fora-header p {
+    margin-inline: 0;
+  }
+
+  .fora-screenshots {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(9rem, 1fr));
+    gap: clamp(0.75rem, 2vw, 1.5rem);
+    margin-block: 3rem;
+    padding: 0.5rem 0.25rem 1.25rem;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+  }
+
+  .fora-screenshots img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 16px -8px rgb(23 23 23 / 25%);
+    scroll-snap-align: start;
+  }
+
+  .fora-screenshots:focus-visible {
+    outline: 3px solid var(--color900);
+    outline-offset: 4px;
+  }
+
+  section {
+    margin-block: clamp(3rem, 7vw, 6rem);
+  }
+
+  h2 {
+    padding-block-start: 2rem;
+    margin-block-end: 2.5rem;
+    border-top: 1px solid var(--color200);
+    scroll-margin-top: 2rem;
+  }
+
+  section p {
+    margin-block-end: 1.25rem;
+  }
+
+  .fora-final-thoughts {
+    max-width: 44rem;
+    margin-inline: auto;
+    padding-inline-start: 1.4rem;
+    list-style: disc;
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
+
+  .fora-final-thoughts li {
+    margin-block-end: 1rem;
+  }
+
+  .fora-introduction-image {
+    margin-block-end: 3rem;
+  }
+
+  .fora-introduction-image img {
+    width: 44rem;
+    height: auto;
+    margin-inline: auto;
+    border-radius: 0.5rem;
+  }
+
+  figcaption {
+    margin-block-start: 0.75rem;
+    color: var(--color700);
+    font-size: 0.875rem;
+    text-align: center;
+  }
+
+  .fora-flow-chart {
+    margin-block-start: 2rem;
+  }
+
+  .fora-design-image,
+  .fora-logo {
+    margin-block: 2rem 3rem;
+  }
+
+  .fora-flow-chart a,
+  .fora-design-image a,
+  .fora-logo a {
+    display: block;
+    border-radius: 0.5rem;
+  }
+
+  .fora-flow-chart img,
+  .fora-design-image img,
+  .fora-logo img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  a:focus-visible {
+    outline: 3px solid var(--color900);
+    outline-offset: 4px;
+  }
+
+  .fora-introduction-actions {
+    max-width: 44rem;
+    margin: 2rem auto;
+  }
+
+  .fora-demo-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color900);
+    border-radius: 0.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .fora-demo-link:hover {
+    background: var(--color200);
+  }
+
+  .fora-demo-video {
+    width: 100%;
+    max-width: 24rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+  }
+
+  .fora-footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    border-top: 1px solid var(--color200);
+    padding-top: 1.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html:has(&) { scroll-behavior: auto; }
+  }
+}

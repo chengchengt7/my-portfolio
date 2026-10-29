@@ -1,0 +1,15 @@
+.statement {
+  padding: 1rem;
+  margin-block-start: 5rem;
+
+  p {
+    font-size: 1.375rem;
+    margin-block-start: 1.5rem;
+  }
+
+  @media (max-width: 900px) {
+    h1 br {
+      display: none;
+    }
+  }
+}
