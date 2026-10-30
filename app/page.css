@@ -1,4 +1,8 @@
-.home {
-  margin-block-end: 4rem;
-}
+@import "@/css/layers.css";
 
+@layer pages {
+  .home {
+    margin-block-end: 4rem;
+  }
+
+}

@@ -1,41 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-:root {
-  font-family: "Inter", system-ui, sans-serif;
-  line-height: 1.5;
-
-  --color100: white;
-  --color200: #e7e7e7;
-  --color300: #C5C5C5;
-  --color400: #A8A8A8;
-  --color500: #8B8B8B;
-  --color600: #6E6E6E;
-  --color700: #515151;
-  --color800: #343434;
-  --color900: #171717;
-}
-
 html {
+  font-size: var(--root-font-size);
+  line-height: var(--root-line-height);
+  font-family: var(--site-font-family);
   scroll-behavior: smooth;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  max-width: 70rem;
-  margin-inline: auto;
-  padding-inline: 1rem;
-}
-
-body {
-  background-color: var(--color100);
-  color: var(--color900);
+  background-color: var(--site-background-color);
+  color: var(--site-text-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -85,13 +57,6 @@ p {
   text-wrap: pretty;
 }
 
-img,
-video,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
 button,
 input,
 select {
@@ -106,4 +71,8 @@ ul {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }

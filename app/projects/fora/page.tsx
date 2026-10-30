@@ -1,3 +1,4 @@
+import "./page.css";
 import Link from "next/link";
 import type { Metadata } from "next";
 const introductionImage = "/Fora/introduction.jpeg";
@@ -10,7 +11,6 @@ const flowChart = "/Fora/flow-chart.png";
 const walkthroughVideo = "/Fora/fora-walk-through.webm";
 const logoProgress = "/Fora/logo.png";
 const cardDesignProgress = "/Fora/card-design-progress.png";
-import "./page.css";
 
 const screenshots = [screenOne, screenTwo, screenThree, screenFour, screenFive];
 
@@ -18,12 +18,12 @@ export const metadata: Metadata = { title: "Fora Case Study — Chengcheng Teng"
 
 export default function Page() {
   return (
-    <main className="fora-case-study" id="top">
-      <header className="fora-header">
-        <Link className="fora-back" href="/#projects">
+    <main className="case-study fora-case-study" id="top">
+      <header className="case-study-header">
+        <Link className="back-link" href="/#projects">
           ← Back to projects
         </Link>
-        <p className="fora-eyebrow">Product design / Development case study</p>
+        <p className="case-study-eyebrow fora-eyebrow">Product design / Development case study</p>
         <h1>Fora — Discover edible wild plants</h1>
         <p>A foraging companion inspired by a first walk into the wild.</p>
       </header>
@@ -47,7 +47,7 @@ export default function Page() {
 
       <section aria-labelledby="introduction">
         <h2 id="introduction">Introduction</h2>
-        <figure className="fora-introduction-image">
+        <figure className="case-study-figure fora-introduction-image">
           <img
             src={introductionImage}
             alt="Plants gathered on my first guided foraging walk, laid out on a kitchen counter"
@@ -83,7 +83,7 @@ export default function Page() {
           with information that supports further learning and verification.
         </p>
         <div className="fora-introduction-actions">
-          <a href="#demo-video" className="fora-demo-link">Jump to Demo video</a>
+          <a href="#demo-video" className="button secondary">Jump to Demo video</a>
         </div>
       </section>
       <section aria-labelledby="ideate">
@@ -97,7 +97,7 @@ export default function Page() {
           This helped me define the screens and decisions needed to keep the
           experience straightforward, with a reminder to verify before consuming.
         </p>
-        <figure className="fora-flow-chart">
+        <figure className="case-study-figure fora-flow-chart">
           <a href={flowChart} target="_blank" rel="noreferrer" aria-label="Open the Fora user flow at full size (opens in a new tab)">
             <img
               src={flowChart}
@@ -118,7 +118,7 @@ export default function Page() {
           comparing different ways to arrange the plant names, edibility label,
           and identification confidence before choosing a layout.
         </p>
-        <figure className="fora-design-image">
+        <figure className="case-study-figure fora-design-image">
           <a href={cardDesignProgress} target="_blank" rel="noreferrer" aria-label="View plant card design iterations at full size (opens in a new tab)">
             <img
               src={cardDesignProgress}
@@ -135,7 +135,7 @@ export default function Page() {
           direction, I used GPT to turn the concept into a digital image,
           keeping my original idea as the starting point.
         </p>
-        <figure className="fora-logo">
+        <figure className="case-study-figure fora-logo">
           <a href={logoProgress} target="_blank" rel="noreferrer" aria-label="View the logo design process at full size (opens in a new tab)">
             <img
               src={logoProgress}
@@ -153,7 +153,7 @@ export default function Page() {
         <p>Watch Fora in action, from identifying a plant to exploring its edibility information.</p>
         <video
           src={walkthroughVideo}
-          className="fora-demo-video"
+          className="demo-video"
           controls
           playsInline
           preload="metadata"
@@ -189,9 +189,9 @@ export default function Page() {
         </ul>
       </section>
 
-      <footer className="fora-footer">
-        <Link className="fora-back" href="/#projects">← Back to projects</Link>
-        <a className="fora-back" href="#top">Back to top ↑</a>
+      <footer className="case-study-footer">
+        <Link className="back-link" href="/#projects">← Back to projects</Link>
+        <a className="back-link" href="#top">Back to top ↑</a>
       </footer>
     </main>
   );

@@ -1,7 +1,7 @@
+import "./page.css";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import Statement from "@/components/Statement/Statement";
 import { projects } from "@/data/projects";
-import "./page.css";
 
 export default function Page() {
   return (

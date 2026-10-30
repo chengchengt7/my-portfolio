@@ -1,11 +1,11 @@
+import "./ProjectCard.css";
 import type { ReactNode } from "react";
 import Link from "next/link";
-import "./ProjectCard.css";
 
 type ProjectAction = {
   label: string;
   href: string;
-    variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary";
 };
 
 export type ProjectCardProps = {
@@ -39,12 +39,12 @@ export default function ProjectCard({
         <div className="project-actions">
           {actions.map(({ label, href, variant = "primary" }) => (
             href.startsWith("/projects/") ? (
-              <Link className={`${variant}-action`} href={href} key={`${label}-${href}`}>
+              <Link className={`button ${variant}`} href={href} key={`${label}-${href}`}>
                 {label}
               </Link>
             ) : (
             <a
-              className={`${variant}-action`}
+              className={`button ${variant}`}
               href={href}
               target="_blank"
               rel="noreferrer"

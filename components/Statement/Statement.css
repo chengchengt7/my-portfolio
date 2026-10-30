@@ -1,15 +1,19 @@
-.statement {
-  padding: 1rem;
-  margin-block-start: 5rem;
+@import "@/css/layers.css";
 
-  p {
-    font-size: 1.375rem;
-    margin-block-start: 1.5rem;
-  }
+@layer components {
+  .statement {
+    padding: 1rem;
+    margin-block-start: 5rem;
 
-  @media (max-width: 900px) {
-    h1 br {
-      display: none;
+    p {
+      font-size: 1.375rem;
+      margin-block-start: 1.5rem;
+    }
+
+    @media (max-width: 900px) {
+      h1 br {
+        display: none;
+      }
     }
   }
 }

@@ -1,3 +1,4 @@
+import "./projects.css";
 const videoPokerHero = "/video-poker/hero.png";
 const savrVideo = "/SAVR/home-SAVR-video-transparent.webm";
 const savrTablet = "/SAVR/home-SAVR-tablet.png";
@@ -5,7 +6,6 @@ const savrDemo = "/SAVR/SAVR walk through.mp4";
 const foraDemo = "/Fora/fora-walk-through.webm";
 const foraCard = "/Fora/4.png";
 import type { ProjectCardProps } from "@/components/ProjectCard/ProjectCard";
-import "./projects.css";
 
 export type Project = ProjectCardProps & {
   id: string;

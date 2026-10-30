@@ -1,0 +1,46 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--color900);
+  border-radius: 0.5rem;
+  background: var(--color900);
+  color: var(--color100);
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 160ms ease, transform 160ms ease;
+
+  &:hover {
+    background: var(--color700);
+    transform: translateY(-1px);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--color900);
+    outline-offset: 4px;
+  }
+
+  &.secondary {
+    background: transparent;
+    color: var(--color900);
+
+    &:hover { background: var(--color200); }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+    &:hover { transform: none; }
+  }
+}

@@ -1,12 +1,16 @@
-.nav {
-  ul { display: flex; align-items: center; }
-  li:first-child { margin-right: auto; }
-  a {
-    display: block;
-    padding: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.04rem;
-    &:hover { color: var(--color700); }
+@import "@/css/layers.css";
+
+@layer components {
+  .nav {
+    ul { display: flex; align-items: center; }
+    li:first-child { margin-right: auto; }
+    a {
+      display: block;
+      padding: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.04rem;
+      &:hover { color: var(--color700); }
+    }
+    img { height: 1.5rem; }
   }
-  img { height: 1.5rem; }
 }
