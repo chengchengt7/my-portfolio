@@ -9,8 +9,7 @@ export default function Statement() {
         feel <strong>clear, intuitive, and human</strong>.
       </h1>
       <p>
-        Front-end Developer & Product Thinker — based in Oslo, open to
-        relocation.
+        Front-end Developer & Product Designer, based in Oslo.
       </p>
     </section>
   );

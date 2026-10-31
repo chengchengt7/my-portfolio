@@ -13,6 +13,7 @@ export type ProjectCardProps = {
   skills: string[];
   description: string;
   media: ReactNode;
+  mediaPosition?: "left" | "right";
   actions: ProjectAction[];
 };
 
@@ -21,10 +22,11 @@ export default function ProjectCard({
   skills,
   description,
   media,
+  mediaPosition = "left",
   actions,
 }: ProjectCardProps) {
   return (
-    <article className="project-card">
+    <article className={`project-card${mediaPosition === "right" ? " media-right" : ""}`}>
       <div className="card-visual">{media}</div>
 
       <div className="card-des">
