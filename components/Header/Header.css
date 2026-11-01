@@ -1,16 +1,28 @@
-@import "@/css/layers.css";
+nav {
+  padding-inline: var(--spacing-l);
+  border-bottom: 1px solid var(--color300);
 
-@layer components {
-  .nav {
-    ul { display: flex; align-items: center; }
-    li:first-child { margin-right: auto; }
-    a {
-      display: block;
-      padding: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.04rem;
-      &:hover { color: var(--color700); }
-    }
-    img { height: 1.5rem; }
+  ul { 
+    display: flex; 
+    align-items: center; 
+    gap: var(--spacing-l); }
+
+  li:first-child { margin-right: auto; }
+
+  a {
+    display: block;
+    text-decoration: none;
+    padding-block: var(--spacing-m);
+    font-weight: 700;
+    letter-spacing: 0.04rem;
+    &:hover { color: var(--color700); }
+  }
+  
+  img { height: 1.5rem; }
+
+  @media (max-width: 40rem) {
+    padding-inline: var(--spacing-m);
+    ul { gap: var(--spacing-m); }
   }
 }
+

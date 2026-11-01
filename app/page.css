@@ -1,4 +1,4 @@
-@import "@/css/layers.css";
+@layer reset, tokens, base, layout, components, pages;
 
 @layer pages {
   .home {

@@ -1,6 +1,4 @@
 html {
-  font-size: var(--root-font-size);
-  line-height: var(--root-line-height);
   font-family: var(--site-font-family);
   scroll-behavior: smooth;
 }
@@ -10,7 +8,7 @@ body {
   color: var(--site-text-color);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
   font-weight: 600;
   text-wrap: balance;
   overflow-wrap: break-word;
@@ -18,8 +16,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
-  font-weight: 400;
-  line-height: 1.2;
+  font-weight: 450;
+  line-height: 1.1;
 }
 
 h2 {
@@ -45,7 +43,6 @@ h5 {
 
 h6 {
   font-size: 0.875rem;
-  font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0.06em;
   color: var(--color600);
@@ -57,22 +54,29 @@ p {
   text-wrap: pretty;
 }
 
-button,
-input,
-select {
-  font: inherit;
-  border: 0;
+code {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  &:not(pre code) {
+    padding: 0.1em 0.35em;
+    border-radius: 0.25rem;
+    background-color: var(--color200);
+    color: var(--color900);
+    font-size: 0.875em;
+    overflow-wrap: anywhere;
+  }
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+pre {
+  max-inline-size: min(100%, var(--case-study-text-max-inline-size));
+  margin-inline: auto;
+  overflow-x: auto;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid var(--color200);
+  border-radius: 0.5rem;
+  background-color: var(--color900);
+  color: var(--color100);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  text-align: start;
 }

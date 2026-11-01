@@ -13,3 +13,19 @@ svg {
   display: block;
   max-inline-size: 100%;
 }
+
+button,
+input,
+select {
+  font: inherit;
+  border: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+

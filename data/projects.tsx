@@ -104,8 +104,13 @@ export const projects: Project[] = [
     ),
     actions: [
       {
+        label: "View case study",
+        href: "/projects/video-poker",
+      },
+      {
         label: "Play game",
         href: "https://video-poker-game.vercel.app/",
+        variant: "secondary",
       },
       {
         label: "View code",
@@ -118,7 +123,7 @@ export const projects: Project[] = [
     id: "savr",
     name: "SAVR - Personal Recipe Manager",
     mediaPosition: "right",
-    skills: ["Product design", "UX design"],
+    skills: ["Product design", "UX design", "Figma"],
     description:
       "SAVR is a retro-inspired recipe journal for capturing your unique culinary adventures. With no preloaded library, it's a hand-picked collection of dishes you've cooked, loved, and plan to try, enhanced by shopping list generation and AI-powered search.",
     media: (

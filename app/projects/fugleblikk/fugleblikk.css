@@ -1,0 +1,190 @@
+@layer reset, tokens, base, layout, components, pages;
+
+@layer pages {
+  .fugleblikk-case-study {
+    --bird-ink: #29382d;
+    --bird-paper: #f1f4ee;
+    margin-block-end: 4rem;
+
+    h3,
+    .fugleblikk-narrow,
+    .fugleblikk-principle,
+    .fugleblikk-lessons {
+      max-width: var(--case-study-text-max-inline-size);
+      margin-inline: auto;
+    }
+
+    h3 { margin-block: 2.5rem 1rem; }
+
+    .case-study-eyebrow {
+      color: var(--bird-ink);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    .fugleblikk-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-block: 1.75rem;
+    }
+
+    .case-study-figure,
+    .fugleblikk-architecture { margin-block: 2.5rem 3rem; }
+
+    .fugleblikk-hero { margin-block-start: 3rem; }
+
+    figcaption {
+      margin-block-start: 0.75rem;
+      color: var(--color700);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .fugleblikk-facts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2rem;
+      padding-block: 1.5rem;
+      border-block: 1px solid var(--color200);
+
+      dt {
+        margin-block-end: 0.5rem;
+        color: var(--color700);
+        font-size: 0.875rem;
+      }
+
+      dd { font-weight: 600; line-height: 1.6; }
+    }
+
+    .fugleblikk-chapters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      margin-block: 1.5rem;
+
+      a {
+        padding-block: 0.4rem;
+        font-size: 0.875rem;
+        text-underline-offset: 0.3em;
+      }
+    }
+
+    .fugleblikk-principle {
+      margin-block: 2rem;
+      padding: 1.5rem 2rem;
+      border-inline-start: 3px solid var(--bird-ink);
+      background: var(--bird-paper);
+      color: var(--bird-ink);
+      font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+      line-height: 1.5;
+    }
+
+    .architecture-panel {
+      padding: clamp(1.25rem, 3vw, 2.5rem);
+      border: 1px solid #d9e0d4;
+      border-radius: 1rem;
+      background: var(--bird-paper);
+      color: var(--bird-ink);
+
+      p { max-width: none; }
+    }
+
+    .architecture-label {
+      margin: 0 0 1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    .architecture-flow {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2rem;
+      list-style: none;
+
+      li {
+        position: relative;
+        padding: 1.25rem;
+        border: 1px solid #c6d0c0;
+        border-radius: 0.5rem;
+        background: var(--white);
+      }
+
+      li + li::before {
+        content: "→";
+        position: absolute;
+        top: 50%;
+        left: -1.65rem;
+        transform: translateY(-50%);
+        font-size: 1.25rem;
+      }
+
+      strong { display: block; margin-block-end: 0.5rem; }
+      span { display: block; font-size: 0.875rem; line-height: 1.7; }
+    }
+
+    .architecture-bridge {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-block: 1.5rem;
+      font-size: 0.875rem;
+
+      span { font-size: 1.5rem; }
+    }
+
+    .architecture-runtime { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .architecture-live {
+      margin-block: 1.5rem 0;
+      font-size: 0.875rem;
+      line-height: 1.7;
+    }
+
+    .fugleblikk-lessons {
+      > div {
+        padding-inline-start: 1.5rem;
+        border-inline-start: 2px solid #c6d0c0;
+      }
+    }
+
+    .fugleblikk-mobile-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(1rem, 3vw, 2.5rem);
+      max-width: 52rem;
+      margin: 2.5rem auto 3rem;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: 0 8px 24px -12px rgb(23 23 23 / 35%);
+      }
+    }
+
+    @media (max-width: 43.75rem) {
+      .fugleblikk-facts { grid-template-columns: 1fr; gap: 1.25rem; }
+      .fugleblikk-principle { padding: 1.25rem; }
+
+      .architecture-flow {
+        grid-template-columns: 1fr;
+
+        li + li::before {
+          content: "↓";
+          top: -1.95rem;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .fugleblikk-mobile-gallery {
+        grid-template-columns: 1fr;
+        max-width: 19rem;
+        gap: 2rem;
+      }
+    }
+  }
+}

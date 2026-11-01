@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <nav className="nav" aria-label="Main navigation">
+    <nav aria-label="Main navigation">
       <ul>
         <li>
           <Link href="/">Chengcheng Teng</Link>
@@ -20,7 +20,7 @@ export default function Header() {
             target="_blank"
             aria-label="GitHub"
           >
-            <img src="/github-logo.png" alt="GitHub" />
+            <img src="/github-logo.png" alt="" />
           </a>
         </li>
       </ul>

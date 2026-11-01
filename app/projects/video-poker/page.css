@@ -1,0 +1,67 @@
+@layer reset, tokens, base, layout, components, pages;
+
+@layer pages {
+  .poker-case-study {
+    margin-block-end: 4rem;
+
+    h3,
+    .poker-narrow,
+    .poker-code {
+      max-width: var(--case-study-text-max-inline-size);
+      margin-inline: auto;
+    }
+
+    h3 { margin-block: 2.5rem 1rem; }
+
+    .case-study-eyebrow {
+      color: var(--color700);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    .poker-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-block: 1.75rem;
+    }
+
+    .case-study-figure,
+    .poker-code { margin-block: 2.5rem 3rem; }
+
+    figcaption {
+      margin-block-start: 0.75rem;
+      color: var(--color700);
+      font-size: 0.875rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .poker-code {
+      min-inline-size: 0;
+      margin-bottom: 1rem;
+
+      figcaption {
+        margin-block: 0 0.75rem;
+        text-align: start;
+      }
+
+      a {
+        text-underline-offset: 0.2em;
+      }
+    }
+
+    .poker-screenshots {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+
+      figure { margin-block: 1rem 0; }
+    }
+
+    @media (max-width: 43.75rem) {
+      .poker-screenshots { grid-template-columns: 1fr; }
+    }
+  }
+}
