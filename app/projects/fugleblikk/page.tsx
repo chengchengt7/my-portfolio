@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 const chapters = [
   ["idea", "The idea"],
-  ["experience", "The experience"],
   ["data", "The data"],
+  ["experience", "Building the map"],
   ["architecture", "Architecture"],
   ["challenges", "Challenges"],
   ["reflection", "Reflection"],
@@ -27,79 +27,118 @@ export default function Page() {
   return (
     <article className="case-study fugleblikk-case-study" id="top">
       <header className="case-study-header">
-        <Link className="back-link" href="/#projects">← Back to projects</Link>
-        <p className="case-study-eyebrow">Front-end development / Product design</p>
-        <h1>Fugleblikk — A little curiosity, a world of birds</h1>
+        <Link className="back-link" href="/#projects">
+          ← Back to projects
+        </Link>
+        <p className="case-study-eyebrow">
+          Front-end development / Product design
+        </p>
+        <h1>Fugleblikk — Explore birdlife in norway</h1>
         <p>
-          An interactive globe that turns Norway’s bird observations into a
+          An interactive globe that turns Norway's bird observations into a
           visual invitation to explore, listen, and learn.
         </p>
         <div className="fugleblikk-actions">
-          <a className="button" href="https://fugleblikk.vercel.app/" target="_blank" rel="noreferrer">Visit site ↗</a>
-          <a className="button secondary" href="https://github.com/chengchengt7/fugleblikk" target="_blank" rel="noreferrer">View code ↗</a>
+          <a
+            className="button"
+            href="https://fugleblikk.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Visit site ↗
+          </a>
+          <a
+            className="button secondary"
+            href="https://github.com/chengchengt7/fugleblikk"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View code ↗
+          </a>
         </div>
       </header>
 
       <figure className="case-study-figure fugleblikk-hero">
         <img
           src="/Fugleblikk/bird-hero.png"
-          alt="Bird cutouts arranged across Norway’s satellite map, with a Black Redstart preview card open"
+          alt="Bird cutouts arranged across Norway's satellite map, with a Black Redstart preview card open"
           width={2880}
           height={1556}
           fetchPriority="high"
         />
-        <figcaption>A map to explore through birds, photographs, and sound.</figcaption>
+        <figcaption>
+          A map to explore through birds, photographs, sound, and migration.
+        </figcaption>
       </figure>
 
       <dl className="fugleblikk-facts">
-        <div><dt>Project</dt><dd>School assignment → personal project</dd></div>
-        <div><dt>My role</dt><dd>Product design & front-end development</dd></div>
-        <div><dt>Built with</dt><dd>Next.js, React, TypeScript, MapLibre</dd></div>
+        <div>
+          <dt>Project</dt>
+          <dd>Personal project</dd>
+        </div>
+        <div>
+          <dt>My role</dt>
+          <dd>Product design & front-end development</dd>
+        </div>
+        <div>
+          <dt>Built with</dt>
+          <dd>Next.js, React, TypeScript, MapLibre</dd>
+        </div>
       </dl>
 
       <nav className="fugleblikk-chapters" aria-label="Case study sections">
-        {chapters.map(([id, label]) => <a key={id} href={`#${id}`}>{label}</a>)}
+        {chapters.map(([id, label]) => (
+          <a key={id} href={`#${id}`}>
+            {label}
+          </a>
+        ))}
       </nav>
 
       <section aria-labelledby="idea">
-        <h2 id="idea">From an open assignment to a personal escape</h2>
+        <h2 id="idea">From an open assignment to a hobby project</h2>
         <p>
-          An open school assignment let me combine my love of nature,
-          biodiversity, and data visualization. What if discovering a bird
-          began with seeing its shape and hearing its voice, even when you
-          did not know its name?
+          Fugleblikk began as a school assignment to build a website where users
+          could search for information from an API. I saw an opportunity to
+          combine my love of nature, biodiversity, and data visualization into a
+          way to explore the birdlife around us.
         </p>
         <p>
-          Inspired by the geographic exploration of Radio Garden and Earth
-          Nullschool, I imagined bird photographs forming a living mosaic across
-          Norway. The assignment grew into a hobby project; I now use its mixed
-          bird sounds as a background soundtrack for quiet time.
-        </p>
-        <blockquote className="fugleblikk-principle">
-          See a bird. Hear its voice. Discover its story.
-        </blockquote>
-        <p>
-          My design principle: reveal a little more at each step, with no
-          specialist knowledge needed to begin.
+          Inspired by the geographic exploration of{" "}
+          <a href="https://radio.garden/" target="_blank" rel="noreferrer">
+            Radio Garden
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://earth.nullschool.net/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Earth Nullschool
+          </a>
+          , I imagined bird photographs forming a living mosaic across Norway.
+          Rather than needing to know a bird's name before searching, visitors
+          could start with its shape, listen to its call, and discover where it
+          had been observed. That idea grew into a personal project: making
+          Norway's birdlife easier to explore through sight, sound, and place.
         </p>
       </section>
 
-      <section aria-labelledby="experience">
-        <h2 id="experience">Designing an invitation to explore</h2>
+      <section aria-labelledby="data">
+        <h2 id="data">Connecting the data before building the map</h2>
         <p>
-          The journey is short: explore the globe, select a bird, listen, then
-          open its species page. The preview preserves the map context; the
-          detail page gives photographs, habitat, and descriptions more room.
-          Norwegian and English names support different visitors, while scientific
-          names connect the underlying records.
+          I started with the data each bird would need. Artskart supplied
+          observations from Norway, and Artsdatabanken's Artsnavn helped me
+          match synonyms and subspecies to one accepted species ID. I then added
+          English names and photographs from iNaturalist, recordings from
+          Xeno-canto, descriptions from Wikipedia, and habitat information from
+          Artsdatabanken.
         </p>
-        <h3>Let the birds carry the interface</h3>
         <p>
-          Satellite imagery supplies a sense of place. Darkening the map helps
-          the cutouts stand out, while restrained controls leave space for
-          browsing. Removing photo backgrounds makes each bird’s silhouette
-          recognizable and gives the mosaic its character. The original photo
-          stays in the preview card, preserving its context when selected.
+          Before introducing a map, I tested the API results in a simple
+          collection of bird cards. This let me check species matching, missing
+          photos, and playable recordings separately from the map logic. With
+          the cards working, I used Python and rembg to remove photo backgrounds
+          and generate bird cutouts.
         </p>
         <figure className="case-study-figure fugleblikk-narrow">
           <img
@@ -109,57 +148,84 @@ export default function Page() {
             height={752}
             loading="lazy"
           />
-          <figcaption>An early card exploration: one photograph, two roles in the experience.</figcaption>
+          <figcaption>
+            Testing API returns as bird card and then generate bird cutout.
+          </figcaption>
         </figure>
         <p>
-          Search offers a direct route for visitors who already know a name.
-          Finding a match moves the globe to the bird and opens its card, bringing
-          search back into the same visual journey.
+          The collection also needed a clear rule for inclusion. I kept each
+          species' latest usable observation from the previous twelve complete
+          calendar months, checking its date and location. I used each species'
+          official ID to avoid listing the same bird twice under different
+          names.
         </p>
-        <figure className="case-study-figure">
-          <img src="/Fugleblikk/search.png" alt="Searching for Rødtoppfuglekonge focuses the map on its bird card" width={2880} height={1556} loading="lazy" />
-          <figcaption>Search connects a known name to a place in the collection.</figcaption>
-        </figure>
       </section>
 
-      <section aria-labelledby="data">
-        <h2 id="data">Making the collection trustworthy</h2>
-        <h3>A species name is not evidence of a sighting</h3>
+      <section aria-labelledby="experience">
+        <h2 id="experience">Placing birds on a map</h2>
         <p>
-          Which birds belong in the collection? Taxonomy alone does not establish
-          that a bird was observed in Norway. I used Artskart to find candidates,
-          then Artsnavn to
-          resolve accepted species, synonyms, and subspecies to one official
-          species ID, preventing duplicate birds under different names.
+          I then introduced MapLibre for the interactive globe and MapTiler for
+          satellite imagery. Exact observation coordinates made birds overlap,
+          so I assigned them to grid positions while minimizing their total
+          distance from the recorded locations. This made the mosaic readable,
+          with a tradeoff: the cutouts represent the collection, not precise
+          sighting locations.
         </p>
         <p>
-          The preparation script checks dates, coordinates, and geographic scope,
-          keeping each species’ latest usable observation from the previous
-          twelve complete calendar months. Records without usable locations are
-          skipped, and the saved collection is refreshed monthly.
+          I kept search and map selection connected to the same bird card. A
+          search result moves the map to its bird, rather than introducing a
+          separate results view.
         </p>
-        <h3>Readable placement comes with a tradeoff</h3>
+        <figure className="case-study-figure">
+          <img
+            src="/Fugleblikk/search.png"
+            alt="Searching for Rødtoppfuglekonge focuses the map on its bird card"
+            width={2880}
+            height={1556}
+            loading="lazy"
+          />
+          <figcaption>
+            Search and map selection open the same bird card.
+          </figcaption>
+        </figure>
         <p>
-          Exact coordinates would stack bird images in heavily observed areas.
-          I used a grid and a minimum-distance assignment algorithm to give each
-          bird its own space while minimizing the total distance from recorded
-          locations. This makes the mosaic easier to browse, but some birds move
-          farther than others. The layout is an exploration aid; individual
-          cutouts do not mark precise sightings.
+          Five illustrative migration routes extend the experience beyond
+          Norway. Visitors can follow one bird or compare routes through a
+          monthly timeline. These are simplified seasonal journeys, not live
+          tracking.
         </p>
+        <figure className="case-study-figure">
+          <img
+            src="/Fugleblikk/migration-all.png"
+            alt="Five colored migration routes across the globe with species selection and a monthly timeline"
+            width={2880}
+            height={1556}
+            loading="lazy"
+          />
+          <figcaption>
+            Migration adds a sense of movement and scale to the birds' stories.
+          </figcaption>
+        </figure>
       </section>
 
       <section aria-labelledby="architecture">
-        <h2 id="architecture">Prepare the data. Keep browsing light.</h2>
+        <h2 id="architecture">Separate preparation from browsing</h2>
         <p>
-          Reading a saved collection avoids fetching and combining biodiversity
-          records during browsing. Next.js handles server routes and prepares
-          map positions; React and MapLibre handle browser interaction.
+          Fetching records, matching species, and generating cutouts do not need
+          to happen on every site visit. I moved those work into a monthly
+          GitHub Actions workflow, saving a JSON snapshot and local WebP
+          cutouts. Next.js reads that collection and prepares map positions;
+          React and MapLibre handle interaction in the browser.
         </p>
 
-        <figure className="fugleblikk-architecture" aria-labelledby="architecture-caption">
+        <figure
+          className="fugleblikk-architecture"
+          aria-labelledby="architecture-caption"
+        >
           <div className="architecture-panel">
-            <p className="architecture-label">01 / Monthly preparation · GitHub Actions</p>
+            <p className="architecture-label">
+              01 / Monthly preparation · GitHub Actions
+            </p>
             <ol className="architecture-flow">
               <li>
                 <strong>External sources</strong>
@@ -177,7 +243,10 @@ export default function Page() {
                 <span>Local WebP bird cutouts</span>
               </li>
             </ol>
-            <p className="architecture-bridge"><span aria-hidden="true">↓</span> Saved collection read by the application</p>
+            <p className="architecture-bridge">
+              <span aria-hidden="true">↓</span> Saved collection read by the
+              application
+            </p>
             <p className="architecture-label">02 / Browsing the site</p>
             <ol className="architecture-flow architecture-runtime">
               <li>
@@ -192,26 +261,28 @@ export default function Page() {
               </li>
             </ol>
             <p className="architecture-live">
-              <strong>Requested when needed:</strong> search through the API route;
-              MapTiler satellite tiles, remote photos, and audio from their providers.
+              <strong>Requested when needed:</strong> search through the API
+              route; MapTiler satellite tiles, remote photos, and audio from
+              their providers.
             </p>
           </div>
-          <figcaption id="architecture-caption">Preparation and browsing have different responsibilities.</figcaption>
+          <figcaption id="architecture-caption">
+            Preparation and browsing have different responsibilities.
+          </figcaption>
         </figure>
 
-        <h3>Store expensive work; load playable media on demand</h3>
+        <h3>Prepare once, load media when needed</h3>
         <p>
-          A Python script generates cutouts ahead of browsing and reuses existing
-          files. Recordings already have playable URLs, so I store references and
-          use audio players with no preload, avoiding hundreds of audio files in
-          the repository.
+          The preparation script reuses existing cutouts. Photos and recordings
+          stay with their providers, and audio players use no preload, keeping
+          media downloads out of the initial page load.
         </p>
-        <h3>Keep React and the map in sync</h3>
+        <h3>Give React and MapLibre clear responsibilities</h3>
         <p>
-          MapLibre owns the map and markers. React owns selection and controls,
-          with a portal rendering the bird card inside a map popup. Refs retain
-          map instances across renders, and effect cleanup removes markers,
-          listeners, and the map when no longer needed.
+          MapLibre manages the globe and markers, while React manages selection
+          and controls. A portal renders the React bird card inside a map popup.
+          Refs keep map instances across renders, and effect cleanup removes
+          markers and listeners when they are no longer needed.
         </p>
       </section>
 
@@ -221,32 +292,29 @@ export default function Page() {
           <div>
             <h3>A Norwegian name broke its page</h3>
             <p>
-              The page for “ismåke” exposed a URL-handling mistake. I added shared
-              name normalization, encoded names when creating links, and decoded
-              route parameters before matching. It taught me to test real local
-              names, including “å”, throughout the navigation flow.
+              During testing, the failed page for “ismåke” exposed a
+              URL-handling mistake. I fixed it by encoding names in links,
+              decoding route parameters before matching. This taught me how to
+              handle URL parameters consistently across different languages.
             </p>
           </div>
           <div>
             <h3>A partial refresh must not replace good data</h3>
             <p>
-              My first GitHub Actions workflow made the collection refreshable
-              without manual edits. Preparation writes to a temporary snapshot
-              and replaces the saved data only after completion. The workflow
-              builds before committing updates; changed pagination or missing
-              usable observations stops the run instead of publishing incomplete data.
-              A later scheduled run failed when Artsdatabanken returned HTTP 403
-              for a habitat lookup. I made habitat HTTP errors log a warning and
-              leave that optional field empty, so observations can still refresh.
+              My monthly GitHub Actions workflow validates and builds the
+              updated collection before replacing the saved data. A scheduled
+              run failed when Artsdatabanken returned HTTP 403 during a habitat
+              lookup. I updated the error handling to treat habitat as optional,
+              so a failed lookup leaves that field empty and the workflow can
+              continue.
             </p>
           </div>
           <div>
             <h3>Search results can arrive in the wrong order</h3>
             <p>
-              A slower request should not overwrite a newer query. A request
-              counter lets the interface ignore stale responses. Separate states
-              explain no match, a bird outside the collection, and a service
-              error. Exact-name matching is still a limitation I would improve.
+              An older search result sometimes replaced a newer one because its
+              request took longer to finish. I fixed this with a request counter
+              so only the latest search updates the results.
             </p>
           </div>
         </div>
@@ -256,55 +324,57 @@ export default function Page() {
         <h2 id="responsive">Making room for exploration on mobile</h2>
         <p>
           The mobile layout keeps the same journey, with a compact bird preview
-          and a photo gallery that reflows on the species page. Migration controls
-          move below the globe on smaller screens, giving the map and timeline
-          their own space. Labelled controls, keyboard-accessible bird buttons,
-          and reduced-motion handling support different ways of exploring.
+          and rearranged photo gallery. Migration controls move below the globe
+          on smaller screens, giving the map and timeline their own space.
         </p>
         <div className="fugleblikk-mobile-gallery">
           {mobileScreens.map(({ src, alt, caption }) => (
             <figure key={src}>
-              <img src={`/Fugleblikk/${src}`} alt={alt} width={1179} height={2556} loading="lazy" />
+              <img
+                src={`/Fugleblikk/${src}`}
+                alt={alt}
+                width={1179}
+                height={2556}
+                loading="lazy"
+              />
               <figcaption>{caption}</figcaption>
             </figure>
           ))}
         </div>
-        <p>
-          Five illustrative migration routes extend the experience beyond Norway.
-          Visitors can follow one bird or compare routes through a monthly
-          timeline. These are simplified seasonal journeys, not live tracking.
-        </p>
-        <figure className="case-study-figure">
-          <img src="/Fugleblikk/migration-all.png" alt="Five colored migration routes across the globe with species selection and a monthly timeline" width={2880} height={1556} loading="lazy" />
-          <figcaption>Migration adds a sense of movement and scale to the birds’ stories.</figcaption>
-        </figure>
       </section>
 
       <section aria-labelledby="reflection">
-        <h2 id="reflection">What I would take into the next project</h2>
+        <h2 id="reflection">Final thoughts</h2>
         <p>
-          Fugleblikk became a working product that connects visual design,
-          interactive maps, and an automated data pipeline. Its biggest lesson
-          was that interface decisions depend on the data beneath them: naming,
-          location, freshness, and missing media all shape the experience.
+          Fugleblikk grew from a school assignment into something I enjoy using
+          myself — I put on the mixed bird sounds when I want a little zen time!
+          From ideation to API testing, from visual experimenting to software
+          structuring, from data preparation to error handling, I learned how
+          each decision shaped the next.
         </p>
         <p>
-          I also let appealing extras—migration playback and mixed sound—grow
-          before the core experience was fully tested. Next time, I would finish
-          and test that journey first. My priorities now are clearer recovery
-          when external media fails, targeted tests for dates, species matching,
-          and Norwegian URLs, and usability sessions to check whether beginners
-          understand the map and its location tradeoff.
+          There are still limitationsin this project. Search needs an exact
+          Norwegian or English name and only returns birds in the saved
+          collection. The grid moves some birds away from their recorded
+          locations, and the migration routes are illustrations, not live
+          tracking. Photos, descriptions, and recordings can be missing or
+          temporarily unavailable, including during Xeno-canto maintenance. The
+          globe requires WebGL2.
         </p>
-        <div className="fugleblikk-actions fugleblikk-narrow">
-          <a className="button" href="https://fugleblikk.vercel.app/" target="_blank" rel="noreferrer">Explore Fugleblikk ↗</a>
-          <a className="button secondary" href="https://github.com/chengchengt7/fugleblikk" target="_blank" rel="noreferrer">View code ↗</a>
-        </div>
+        <p>
+          Overall, this project gave me hands-on experience with the full
+          product development process, and I'm excited to bring what I learned
+          into my next project.
+        </p>
       </section>
 
       <footer className="case-study-footer">
-        <Link className="back-link" href="/#projects">← Back to projects</Link>
-        <a className="back-link" href="#top">Back to top ↑</a>
+        <Link className="back-link" href="/#projects">
+          ← Back to projects
+        </Link>
+        <a className="back-link" href="#top">
+          Back to top ↑
+        </a>
       </footer>
     </article>
   );
