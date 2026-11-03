@@ -1,24 +1,14 @@
 import "./page.css";
 import Link from "next/link";
 import type { Metadata } from "next";
-const introductionImage = "/Fora/introduction.jpeg";
-const screenOne = "/Fora/1.png";
-const screenTwo = "/Fora/2.png";
-const screenThree = "/Fora/3.png";
-const screenFour = "/Fora/4.png";
-const screenFive = "/Fora/5.png";
-const flowChart = "/Fora/flow-chart.png";
-const walkthroughVideo = "/Fora/fora-walk-through.webm";
-const logoProgress = "/Fora/logo.png";
-const cardDesignProgress = "/Fora/card-design-progress.png";
 
-const screenshots = [screenOne, screenTwo, screenThree, screenFour, screenFive];
+const screenshots = ["/Fora/1.png", "/Fora/2.png", "/Fora/3.png", "/Fora/4.png", "/Fora/5.png"];
 
 export const metadata: Metadata = { title: "Fora Case Study — Chengcheng Teng" };
 
 export default function Page() {
   return (
-    <main className="case-study fora-case-study" id="top">
+    <article className="case-study fora-case-study" id="top">
       <header className="case-study-header">
         <Link className="back-link" href="/#projects">
           ← Back to projects
@@ -49,7 +39,7 @@ export default function Page() {
         <h2 id="introduction">Introduction</h2>
         <figure className="case-study-figure fora-introduction-image">
           <img
-            src={introductionImage}
+            src="/Fora/introduction.jpeg"
             alt="Plants gathered on my first guided foraging walk, laid out on a kitchen counter"
             width={4028}
             height={2744}
@@ -98,9 +88,9 @@ export default function Page() {
           experience straightforward, with a reminder to verify before consuming.
         </p>
         <figure className="case-study-figure fora-flow-chart">
-          <a href={flowChart} target="_blank" rel="noreferrer" aria-label="Open the Fora user flow at full size (opens in a new tab)">
+          <a href={"/Fora/flow-chart.png"} target="_blank" rel="noreferrer" aria-label="Open the Fora user flow at full size (opens in a new tab)">
             <img
-              src={flowChart}
+              src="/Fora/flow-chart.png"
               alt="Fora user flow: capture or upload a photo, identify the plant, add photos if confidence is low, then review matches and explore edibility information."
               width={3904}
               height={2560}
@@ -119,9 +109,9 @@ export default function Page() {
           and identification confidence before choosing a layout.
         </p>
         <figure className="case-study-figure fora-design-image">
-          <a href={cardDesignProgress} target="_blank" rel="noreferrer" aria-label="View plant card design iterations at full size (opens in a new tab)">
+          <a href={"/Fora/card-design-progress.png"} target="_blank" rel="noreferrer" aria-label="View plant card design iterations at full size (opens in a new tab)">
             <img
-              src={cardDesignProgress}
+              src="/Fora/card-design-progress.png"
               alt="Five plant card layouts exploring the placement of plant names, edibility labels, photos, and confidence scores"
               width={3860}
               height={709}
@@ -136,9 +126,9 @@ export default function Page() {
           keeping my original idea as the starting point.
         </p>
         <figure className="case-study-figure fora-logo">
-          <a href={logoProgress} target="_blank" rel="noreferrer" aria-label="View the logo design process at full size (opens in a new tab)">
+          <a href={"/Fora/logo.png"} target="_blank" rel="noreferrer" aria-label="View the logo design process at full size (opens in a new tab)">
             <img
-              src={logoProgress}
+              src="/Fora/logo.png"
               alt="Fora logo development, from hand-drawn sketches to digital versions featuring a plant inside a magnifying glass"
               width={2672}
               height={800}
@@ -152,7 +142,7 @@ export default function Page() {
         <h2 id="demo-video">Product Presentation</h2>
         <p>Watch Fora in action, from identifying a plant to exploring its edibility information.</p>
         <video
-          src={walkthroughVideo}
+          src="/Fora/fora-walk-through.webm"
           className="demo-video"
           controls
           playsInline
@@ -193,6 +183,6 @@ export default function Page() {
         <Link className="back-link" href="/#projects">← Back to projects</Link>
         <a className="back-link" href="#top">Back to top ↑</a>
       </footer>
-    </main>
+    </article>
   );
 }

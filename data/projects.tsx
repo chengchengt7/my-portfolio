@@ -1,9 +1,4 @@
 import "./projects.css";
-const savrVideo = "/SAVR/home-SAVR-video-transparent.webm";
-const savrTablet = "/SAVR/home-SAVR-tablet.png";
-const savrDemo = "/SAVR/SAVR walk through.mp4";
-const foraDemo = "/Fora/fora-walk-through.webm";
-const foraCard = "/Fora/4.png";
 import type { ProjectCardProps } from "@/components/ProjectCard/ProjectCard";
 
 export type Project = ProjectCardProps & {
@@ -58,7 +53,7 @@ export const projects: Project[] = [
       <div className="fora-showcase">
         <video
           className="fora-video"
-          src={foraDemo}
+          src="/Fora/fora-walk-through.webm"
           aria-label="Fora plant discovery walkthrough preview"
           autoPlay
           loop
@@ -67,7 +62,7 @@ export const projects: Project[] = [
         />
         <img
           className="fora-image"
-          src={foraCard}
+          src="/Fora/4.png"
           alt="Fora plant discovery app screenshot"
         />
       </div>
@@ -79,12 +74,12 @@ export const projects: Project[] = [
       },
       {
         label: "Watch demo",
-        href: foraDemo,
+        href: "/Fora/fora-walk-through.webm",
         variant: "secondary",
       },
       {
         label: "View code",
-        href: "https://github.com/chengchengt7/Fora---discover-edible-wild-plants",
+        href: "https://github.com/chengchengt7/fora",
         variant: "secondary",
       },
     ],
@@ -94,7 +89,7 @@ export const projects: Project[] = [
     name: "Video Poker Game",
     skills: ["React", "Zustand", "React Router", "TypeScript"],
     description:
-      "A browser-based video poker game built with React and TypeScript.",
+      "My first complete React project: a playable video poker game with saved player balances, persistent rounds, and card animations.",
     media: (
       <img
         className="poker-img"
@@ -125,12 +120,12 @@ export const projects: Project[] = [
     mediaPosition: "right",
     skills: ["Product design", "UX design", "Figma"],
     description:
-      "SAVR is a retro-inspired recipe journal for capturing your unique culinary adventures. With no preloaded library, it's a hand-picked collection of dishes you've cooked, loved, and plan to try, enhanced by shopping list generation and AI-powered search.",
+      "A recipe-journal concept for keeping family recipes and cooking memories together. I designed and tested a Figma prototype with recipe organisation, cooking steps, and shopping lists.",
     media: (
       <div className="savr-showcase">
         <video
           className="savr-showcase-video"
-          src={savrVideo}
+          src="/SAVR/home-SAVR-video-transparent.webm"
           aria-label="SAVR recipe manager preview"
           autoPlay
           loop
@@ -139,7 +134,7 @@ export const projects: Project[] = [
         />
         <img
           className="savr-showcase-tablet"
-          src={savrTablet}
+          src="/SAVR/home-SAVR-tablet.png"
           alt="SAVR recipe manager shown on a tablet"
         />
       </div>
@@ -151,7 +146,7 @@ export const projects: Project[] = [
       },
       {
         label: "Watch demo",
-        href: savrDemo,
+        href: "/SAVR/SAVR walk through.mp4",
         variant: "secondary",
       },
     ],

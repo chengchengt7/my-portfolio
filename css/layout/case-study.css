@@ -1,4 +1,6 @@
 .case-study {
+  margin-block-end: 4rem;
+
   h1 { margin-block-end: 1.5rem; }
 
   h2,
@@ -31,7 +33,7 @@
 
   .back-link {
     display: inline-block;
-    padding-block: 0.75rem;
+    padding-block: 1rem 0.75rem;
     font-weight: 600;
     text-underline-offset: 0.25em;
   }
@@ -39,6 +41,14 @@
   .case-study-figure {
     a { display: block; border-radius: 0.5rem; }
     img { width: 100%; height: auto; border-radius: 0.5rem; }
+  }
+
+  figcaption {
+    margin-block-start: 0.75rem;
+    color: var(--color700);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    text-align: center;
   }
 
   .case-study-image {

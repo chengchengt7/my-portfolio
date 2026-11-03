@@ -4,13 +4,10 @@ export default function Statement() {
   return (
     <section className="statement">
       <h1>
-        I design & build digital products <br />
-        that make complex things <br />
-        feel <strong>clear, intuitive, and human</strong>.
+        I'm Chengcheng, a <span>front-end developer</span> and{" "}
+        <span>product designer</span> based in Oslo.<br /> I enjoy turning ideas into useful, approachable
+        digital experiences.
       </h1>
-      <p>
-        Front-end Developer & Product Designer, based in Oslo.
-      </p>
     </section>
   );
 }

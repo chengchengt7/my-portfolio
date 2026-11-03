@@ -2,28 +2,16 @@
 
 @layer components {
   .statement {
-    padding: 1rem;
+    padding-block: 1rem;
     margin-block-start: 5rem;
 
-    h1 strong {
+    h1 span {
       font-family: Georgia, serif;
       font-style: italic;
-      font-weight: 400;
       text-decoration: underline;
       text-decoration-color: var(--color-accent);
       text-decoration-thickness: 0.12em;
-      text-underline-offset: 0.14em;
-    }
-
-    p {
-      font-size: 1.375rem;
-      margin-block-start: 1.5rem;
-    }
-
-    @media (max-width: 900px) {
-      h1 br {
-        display: none;
-      }
+      text-underline-offset: 0.15em;
     }
   }
 }

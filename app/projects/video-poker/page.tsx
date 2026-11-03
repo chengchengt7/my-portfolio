@@ -58,7 +58,7 @@ export default function Page() {
       <section aria-labelledby="brief">
         <h2 id="brief">The assignment</h2>
         <p>
-          The assignment requires building a video poker game using React,
+          The assignment was to building a video poker game using React,
           TypeScript, Zustand, and React Router. The player bets credits,
           receives five cards, and chooses which ones to keep before drawing
           replacements. The final hand decides the payout.
@@ -241,17 +241,21 @@ export default function Page() {
         <h2 id="reflection">What I learned</h2>
         <p>
           This was my first complete React project, and building a working game
-          helped me understand how components and state work together. Breaking
-          the interface into reusable parts made the project easier to manage. I
-          also learned why it helps to plan how the screens, state, and game
-          rules connect before starting to code.
+          helped me understand how components and state work together. Deciding
+          which data belonged in the shared store and which could stay inside a
+          component was an important part of that. Keeping the hand evaluation
+          and payout functions separate from the UI also made the game rules
+          easier to follow.
         </p>
         <p>
           Once the main game worked, I added sound and card animations, then
           tested the deployed site on my phone to improve the layout on smaller
-          screens. Taking the project from paper sketches to a playable game
-          gave me more confidence in using React and a clearer idea of how to
-          approach my next project.
+          screens. In my next project, I want to set up automated tests early,
+          starting with logic that can be checked independently of the UI. For
+          this game, hand evaluation and payouts would be good places to start,
+          with cases such as ace-low straights, non-winning hands, and payouts
+          for each bet amount. Those tests would help me check that changes to
+          the code preserve the game rules.
         </p>
       </section>
 

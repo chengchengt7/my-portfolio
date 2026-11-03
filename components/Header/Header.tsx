@@ -6,7 +6,11 @@ export default function Header() {
     <nav aria-label="Main navigation">
       <ul>
         <li>
-          <Link href="/">Chengcheng Teng</Link>
+          <Link href="/" aria-label="Home">
+            <span className="header-avatar">
+              <img src="/profile-pic.jpg" alt="" width={40} height={40} />
+            </span>
+          </Link>
         </li>
         <li>
           <Link href="/#projects">Projects</Link>

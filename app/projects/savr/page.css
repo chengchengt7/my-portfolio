@@ -23,6 +23,7 @@
 
     section > ul {
       margin: 0 auto 1.25rem;
+      font-size: 1.125rem;
     }
 
     ul {
@@ -63,6 +64,10 @@
       margin-block: 0 1.25rem;
     }
 
+    .notation { max-width: none; }
+
+    .research-summary { max-width: none; }
+
     .two-cta {
       display: flex;
       flex-wrap: wrap;
@@ -83,8 +88,8 @@
     .tape p { margin: 0; font-family: Georgia, serif; }
     .tape-1,
     .tape-2 { position: absolute; width: 5rem; top: -1rem; }
-    .tape-1 { left: 0; transform: rotate(-15deg); }
-    .tape-2 { right: 0; transform: rotate(15deg); }
+    .tape-1 { left: -1rem; transform: rotate(-15deg); }
+    .tape-2 { right: -1rem; transform: rotate(99deg); }
 
     .personas {
       display: flex;
@@ -100,10 +105,10 @@
       height: auto;
       scroll-snap-align: start;
     }
-    .statement { padding: 1.5rem; border: 2px solid #0054bc; border-radius: 1rem; font-weight: 600; }
+    .statement { padding: 1.5rem; border: 2px solid var(--color-accent); border-radius: 1rem; font-weight: 600; }
     .mid-place { display: flex; width: fit-content; margin: 2rem auto; }
 
-    @media (max-width: 43.75rem) {
+    @media (max-width: 44rem) {
       .two-rows-wide { grid-template-columns: 1fr; }
       .two-rows-narrow { gap: 1rem; padding: 1rem; }
       .two-rows-narrow p { font-size: 1rem; }

@@ -4,7 +4,6 @@
   .fugleblikk-case-study {
     --bird-ink: #29382d;
     --bird-paper: #f1f4ee;
-    margin-block-end: 4rem;
 
     h3,
     .fugleblikk-narrow,
@@ -34,14 +33,6 @@
     .fugleblikk-architecture { margin-block: 2.5rem 3rem; }
 
     .fugleblikk-hero { margin-block-start: 3rem; }
-
-    figcaption {
-      margin-block-start: 0.75rem;
-      color: var(--color700);
-      font-size: 0.875rem;
-      line-height: 1.6;
-      text-align: center;
-    }
 
     .fugleblikk-facts {
       display: grid;

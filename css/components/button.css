@@ -30,7 +30,11 @@
     background: transparent;
     color: var(--color900);
 
-    &:hover { background: var(--color-accent-light); }
+    &:hover { 
+      background: var(--color700); 
+      color: var(--color-accent);
+      border: 2px solid var(--color700);
+    }
   }
 
   &:disabled {

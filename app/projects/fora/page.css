@@ -2,8 +2,6 @@
 
 @layer pages {
   .fora-case-study {
-    margin-block-end: 4rem;
-
     .fora-eyebrow {
       color: var(--color600);
       font-size: 1rem;
@@ -49,13 +47,6 @@
     .fora-introduction-image img {
       width: var(--case-study-text-max-inline-size);
       margin-inline: auto;
-    }
-
-    figcaption {
-      margin-block-start: 0.75rem;
-      color: var(--color700);
-      font-size: 0.875rem;
-      text-align: center;
     }
 
     .fora-flow-chart {

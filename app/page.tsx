@@ -1,17 +1,21 @@
 import "./page.css";
+import Footer from "@/components/Footer/Footer";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import Statement from "@/components/Statement/Statement";
 import { projects } from "@/data/projects";
 
 export default function Page() {
   return (
-    <div className="home">
-      <Statement />
-      <section id="projects" aria-label="Projects">
-        {projects.map(({ id, ...project }) => (
-          <ProjectCard key={id} {...project} />
-        ))}
-      </section>
-    </div>
+    <>
+      <div className="home">
+        <Statement />
+        <section id="projects" aria-label="Projects">
+          {projects.map(({ id, ...project }) => (
+            <ProjectCard key={id} {...project} />
+          ))}
+        </section>
+      </div>
+      <Footer />
+    </>
   );
 }
