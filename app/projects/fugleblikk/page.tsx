@@ -103,12 +103,9 @@ export default function Page() {
           way to explore the birdlife around us.
         </p>
         <p>
-          Inspired by the geographic exploration of{" "}
-          <a href="https://radio.garden/" target="_blank" rel="noreferrer">
+          Inspired by the geographic exploration of <a href="https://radio.garden/" target="_blank" rel="noreferrer">
             Radio Garden
-          </a>{" "}
-          and{" "}
-          <a
+          </a> and <a
             href="https://earth.nullschool.net/"
             target="_blank"
             rel="noreferrer"

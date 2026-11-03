@@ -116,8 +116,7 @@ export default function Page() {
           <figcaption>
             <a href="https://github.com/chengchengt7/school-260910-video-poker/blob/main/src/stores/GlobalStore.ts">
               GlobalStore.ts
-            </a>{" "}
-            · Excerpt from dealCards
+            </a> · Excerpt from dealCards
           </figcaption>
           <pre
             tabIndex={0}
@@ -136,8 +135,7 @@ export default function Page() {
         </figure>
         <p>
           Once these checks pass, the action deducts the bet, deals five cards
-          from a shuffled deck (Fisher-Yates method), and changes the phase to{" "}
-          <code>draw</code>. Keeping these changes together in the store makes
+          from a shuffled deck (Fisher-Yates method), and changes the phase to <code>draw</code>. Keeping these changes together in the store makes
           it easier to follow what happens when the player clicks Deal.
         </p>
         <h3>Replacing cards without repeating them</h3>
@@ -151,8 +149,7 @@ export default function Page() {
           <figcaption>
             <a href="https://github.com/chengchengt7/school-260910-video-poker/blob/main/src/stores/GlobalStore.ts">
               GlobalStore.ts
-            </a>{" "}
-            · Excerpt from drawCards
+            </a> · Excerpt from drawCards
           </figcaption>
           <pre
             tabIndex={0}
@@ -213,8 +210,7 @@ export default function Page() {
           <figcaption>
             <a href="https://github.com/chengchengt7/school-260910-video-poker/blob/main/src/game/payouts.ts">
               payouts.ts
-            </a>{" "}
-            · The payout calculation
+            </a> · The payout calculation
           </figcaption>
           <pre
             tabIndex={0}
