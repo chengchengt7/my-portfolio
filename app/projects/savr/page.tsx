@@ -22,7 +22,7 @@ export default function Page() {
       <img
         src="/SAVR/top-img.png"
         alt="SAVR recipe manager mobile mockups"
-        className="case-study-image img-wide"
+        className="case-study-image"
         fetchPriority="high"
       />
       <section>
@@ -72,7 +72,7 @@ export default function Page() {
             <p>Figma, FigJam</p>
           </div>
         </div>
-        <div className="two-cta">
+        <div className="case-study-actions">
           <a
             href="https://www.figma.com/proto/XHfVS5PfgTDhX0BusNRhBY/SAVR?page-id=39%3A922&node-id=102-1275&p=f&viewport=529%2C444%2C0.07&t=vB6orAtn0UGjY2OJ-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=102%3A1275&show-proto-sidebar=1"
             target="_blank"
@@ -87,7 +87,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="EA">
+      <section>
         <h2>Empathetic Approach</h2>
         <div className="tape">
           <img
@@ -120,7 +120,7 @@ export default function Page() {
           research, interviewing five home cooks between the ages of 25 and 60.
           To understand :
         </p>
-        <ul>
+        <ul className="case-study-list">
           <li>How people currently store and access their recipes.</li>
           <li>
             Identify pain points in both analog (paper, notebooks) and digital
@@ -136,7 +136,7 @@ export default function Page() {
           <img
             src="/SAVR/affinity-map.png"
             alt="Interview findings grouped into themes"
-            className="case-study-image img-wide"
+            className="case-study-image"
             loading="lazy"
           />
         </figure>
@@ -150,7 +150,7 @@ export default function Page() {
           <div>
             <h4>Functional Needs</h4>
             <p>What helps to store, find, and use recipes effectively</p>
-            <ul className="ul-content">
+            <ul className="case-study-list">
               <li>
                 Centralized storage: A single place to store all recipes
                 (handwritten, printed, screenshots, saved links) to avoid
@@ -181,7 +181,7 @@ export default function Page() {
           <div>
             <h4>Emotional Needs</h4>
             <p>What makes the experience personally meaningful</p>
-            <ul className="ul-content">
+            <ul className="case-study-list">
               <li>
                 Memory preservation: Recipes are tied to family history, and
                 personal memories (e.g., great aunt's soup).
@@ -229,7 +229,7 @@ export default function Page() {
         <img
           src="/SAVR/opportunity-map.png"
           alt="opportunity map"
-          className="case-study-image img-wide"
+          className="case-study-image"
           loading="lazy"
         />
         <h3>Competitive Analysis</h3>
@@ -241,7 +241,7 @@ export default function Page() {
         <img
           src="/SAVR/competitive-analysis.png"
           alt="competitive analysis"
-          className="case-study-image img-wide"
+          className="case-study-image"
           loading="lazy"
         />
         <h3>Problem Statement</h3>
@@ -250,7 +250,7 @@ export default function Page() {
           statement that defines the core challenge and sets the vision for my
           app.
         </p>
-        <p className="statement">
+        <p className="savr-problem">
           Home cooks often juggle recipes from social media, websites, and
           family notes across multiple tools that feel either too rigid or too
           impersonal. Existing apps focus on function, but rarely capture the
@@ -273,7 +273,7 @@ export default function Page() {
         <img
           src="/SAVR/feature-ideas.png"
           alt="feature ideas"
-          className="case-study-image img-wide"
+          className="case-study-image"
           loading="lazy"
         />
         <h3>User Flows</h3>
@@ -285,7 +285,7 @@ export default function Page() {
         <img
           src="/SAVR/user-flows.png"
           alt="user flows"
-          className="case-study-image img-wide"
+          className="case-study-image"
           loading="lazy"
         />
         <h3>Sitemap</h3>
@@ -297,7 +297,7 @@ export default function Page() {
         <img
           src="/SAVR/site-map.png"
           alt="site map"
-          className="case-study-image img-wide"
+          className="case-study-image"
           loading="lazy"
         />
       </section>
@@ -314,13 +314,13 @@ export default function Page() {
         <img
           src="/SAVR/sketches.jpg"
           alt="Paper sketches exploring recipe layouts"
-          className="case-study-image img-narrow"
+          className="case-study-image case-study-narrow"
           loading="lazy"
         />
         <img
           src="/SAVR/wireframes.png"
           alt="wireframes"
-          className="case-study-image img-wide"
+          className="case-study-image"
           loading="lazy"
         />
         <h3>Usability Test & Reflections</h3>
@@ -333,7 +333,7 @@ export default function Page() {
         <img
           src="/SAVR/usability-test.png"
           alt="usability test"
-          className="case-study-image img-wide"
+          className="case-study-image"
           loading="lazy"
         />
         <h3>Moodboard & Inspiration</h3>
@@ -348,7 +348,7 @@ export default function Page() {
         <img
           src="/SAVR/moodboard.jpg"
           alt="moodboard"
-          className="case-study-image img-wide"
+          className="case-study-image"
           loading="lazy"
         />
         <h3>Design Systems</h3>
@@ -370,7 +370,7 @@ export default function Page() {
         <img
           src="/SAVR/typography.png"
           alt="typography and colors"
-          className="case-study-image img-narrow"
+          className="case-study-image case-study-narrow"
           loading="lazy"
         />
         <h4>Components</h4>
@@ -382,7 +382,7 @@ export default function Page() {
         <img
           src="/SAVR/components.png"
           alt="components"
-          className="case-study-image img-narrow"
+          className="case-study-image case-study-narrow"
           loading="lazy"
         />
         <h3>Hi-fi Mockups</h3>
@@ -394,7 +394,7 @@ export default function Page() {
         <img
           src="/SAVR/hi-fi.png"
           alt="hi-fi mockups"
-          className="case-study-image img-wide"
+          className="case-study-image"
           loading="lazy"
         />
         <a
@@ -414,7 +414,7 @@ export default function Page() {
         <img
           src="/SAVR/responsive-devices.png"
           alt="responsive mockups"
-          className="case-study-image img-wide"
+          className="case-study-image"
           loading="lazy"
         />
         <h3 id="demo-video">Prototype Presentation</h3>

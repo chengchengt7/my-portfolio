@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <nav aria-label="Main navigation">
+    <nav className="site-nav" aria-label="Main navigation">
       <ul>
         <li>
           <Link href="/" aria-label="Home">

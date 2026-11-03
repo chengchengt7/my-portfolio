@@ -38,7 +38,7 @@ export default function Page() {
           An interactive globe that turns Norway's bird observations into a
           visual invitation to explore, listen, and learn.
         </p>
-        <div className="fugleblikk-actions">
+        <div className="case-study-actions">
           <a
             className="button"
             href="https://fugleblikk.vercel.app/"
@@ -140,7 +140,7 @@ export default function Page() {
           the cards working, I used Python and rembg to remove photo backgrounds
           and generate bird cutouts.
         </p>
-        <figure className="case-study-figure fugleblikk-narrow">
+        <figure className="case-study-figure case-study-narrow">
           <img
             src="/Fugleblikk/card%20%26%20cutout.png"
             alt="An early Bohemian Waxwing card beside its transparent bird cutout"
@@ -219,7 +219,7 @@ export default function Page() {
         </p>
 
         <figure
-          className="fugleblikk-architecture"
+          className="case-study-figure"
           aria-labelledby="architecture-caption"
         >
           <div className="architecture-panel">
@@ -288,7 +288,7 @@ export default function Page() {
 
       <section aria-labelledby="challenges">
         <h2 id="challenges">The problems that taught me the most</h2>
-        <div className="fugleblikk-lessons">
+        <div className="fugleblikk-lessons case-study-narrow">
           <div>
             <h3>A Norwegian name broke its page</h3>
             <p>

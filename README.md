@@ -1,4 +1,4 @@
-# Chengcheng Teng — Portfolio
+# Portfolio
 
 My front-end development and product design projects.
 

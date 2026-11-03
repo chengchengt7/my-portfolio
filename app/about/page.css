@@ -1,11 +1,13 @@
-.about-page {
-  max-width: 65ch;
-  margin-block: 4rem;
+@layer pages {
+  .about-page {
+    max-width: 65ch;
+    margin-block: 4rem;
 
-  img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 0.5rem;
+    img {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+    }
   }
 }

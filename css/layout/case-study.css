@@ -4,7 +4,11 @@
   h1 { margin-block-end: 1.5rem; }
 
   h2,
-  p {
+  h3,
+  h4,
+  h5,
+  p,
+  .case-study-narrow {
     max-width: var(--case-study-text-max-inline-size);
     margin-inline: auto;
   }
@@ -21,6 +25,32 @@
     scroll-margin-top: 2rem;
   }
 
+  h3 {
+    margin-block: 2.5rem 1rem;
+    scroll-margin-top: 2rem;
+  }
+
+  h4,
+  h5 { margin-block: 2rem 0.75rem; }
+
+  .case-study-list {
+    max-width: var(--case-study-text-max-inline-size);
+    margin: 0 auto 1.25rem;
+    padding-inline-start: 1.4rem;
+    list-style: disc;
+    font-size: 1.125rem;
+    line-height: 1.75;
+
+    li { margin-block-end: 0.75rem; }
+  }
+
+  .case-study-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-block: 1.75rem;
+  }
+
   .case-study-header {
     p,
     h6 { margin-inline: 0; }
@@ -28,6 +58,10 @@
 
   .case-study-eyebrow {
     margin-block: 3rem 1rem;
+    color: #29382d;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
   }
 
@@ -39,6 +73,7 @@
   }
 
   .case-study-figure {
+    margin-block: 2.5rem 3rem;
     a { display: block; border-radius: 0.5rem; }
     img { width: 100%; height: auto; border-radius: 0.5rem; }
   }
@@ -52,10 +87,26 @@
   }
 
   .case-study-image {
+    margin: 2rem auto 3rem;
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
   }
+
+  .case-study-code {
+    min-inline-size: 0;
+    margin-block: 2.5rem 1rem;
+
+    figcaption {
+      margin-block: 0 0.75rem;
+      text-align: start;
+    }
+
+    a {
+      text-underline-offset: 0.2em;
+    }
+  }
+
 
   .demo-video {
     width: 100%;
@@ -76,5 +127,32 @@
   :focus-visible {
     outline: 3px solid var(--color900);
     outline-offset: 4px;
+  }
+
+  code {
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+
+    &:not(pre code) {
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      background-color: var(--color200);
+      color: var(--color900);
+      font-size: 0.875em;
+      overflow-wrap: anywhere;
+    }
+  }
+
+  pre {
+    max-inline-size: min(100%, var(--case-study-text-max-inline-size));
+    margin-inline: auto;
+    overflow-x: auto;
+    padding: clamp(1rem, 3vw, 1.5rem);
+    border: 1px solid var(--color200);
+    border-radius: 0.5rem;
+    background-color: var(--color900);
+    color: var(--color100);
+    font-size: 0.875rem;
+    line-height: 1.7;
+    text-align: start;
   }
 }

@@ -13,9 +13,14 @@ export default function Page() {
         <Link className="back-link" href="/#projects">
           ← Back to projects
         </Link>
-        <p className="case-study-eyebrow fora-eyebrow">Product design / Development case study</p>
+        <p className="case-study-eyebrow">
+          Front-end development / Product design
+        </p>
         <h1>Fora — Discover edible wild plants</h1>
-        <p>A foraging companion inspired by a first walk into the wild.</p>
+        <p>
+          A foraging companion that helps you identify wild plants from photos
+          and learn about their edibility, preparation, and precautions.
+        </p>
       </header>
 
       <div
@@ -37,7 +42,7 @@ export default function Page() {
 
       <section aria-labelledby="introduction">
         <h2 id="introduction">Introduction</h2>
-        <figure className="case-study-figure fora-introduction-image">
+        <figure className="case-study-figure case-study-narrow fora-introduction-image">
           <img
             src="/Fora/introduction.jpeg"
             alt="Plants gathered on my first guided foraging walk, laid out on a kitchen counter"
@@ -72,23 +77,31 @@ export default function Page() {
           build their knowledge and enjoy discovering the plants around them,
           with information that supports further learning and verification.
         </p>
-        <div className="fora-introduction-actions">
-          <a href="#demo-video" className="button secondary">Jump to Demo video</a>
+        <div className="case-study-actions case-study-narrow">
+          <a href="#demo-video" className="button secondary">
+            Jump to Demo video
+          </a>
         </div>
       </section>
       <section aria-labelledby="ideate">
         <h2 id="ideate">Ideate</h2>
         <p>
-          I focused on a simple question: how could I help a beginner move from
-          spotting an unfamiliar plant to learning about it, without switching
-          between apps? I mapped out three steps: capture, identify, and explore.
-          The flow brings plant matches and edibility information together, while
-          giving users a way to add more photos when identification is uncertain.
-          This helped me define the screens and decisions needed to keep the
-          experience straightforward, with a reminder to verify before consuming.
+          I focused on a simple question: how could I help a beginner from
+          spotting an unfamiliar plant to learning about it and make decision to
+          forage it, without switching between sources? I mapped out three
+          steps: capture, identify, and explore. The flow brings plant matches
+          and edibility information together, while giving users a way to add
+          more photos when identification is uncertain. This helped me define
+          the screens and decisions needed to keep the experience
+          straightforward, with a reminder to verify before consuming.
         </p>
         <figure className="case-study-figure fora-flow-chart">
-          <a href={"/Fora/flow-chart.png"} target="_blank" rel="noreferrer" aria-label="Open the Fora user flow at full size (opens in a new tab)">
+          <a
+            href={"/Fora/flow-chart.png"}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open the Fora user flow at full size (opens in a new tab)"
+          >
             <img
               src="/Fora/flow-chart.png"
               alt="Fora user flow: capture or upload a photo, identify the plant, add photos if confidence is low, then review matches and explore edibility information."
@@ -97,19 +110,23 @@ export default function Page() {
               loading="lazy"
             />
           </a>
-          <figcaption>Flow cahrt - From capture to discovery</figcaption>
+          <figcaption>User flow — From capture to discovery</figcaption>
         </figure>
       </section>
       <section aria-labelledby="design">
         <h2 id="design">Design</h2>
         <p>
           As a personal hobby project with a simple interface, Fora gave me room
-          to design directly in code. I used Figma only for the plant card,
-          comparing different ways to arrange the plant names, edibility label,
-          and identification confidence before choosing a layout.
+          to design directly in code. I used Figma only for experimenting the
+          layout of the plant card.
         </p>
         <figure className="case-study-figure fora-design-image">
-          <a href={"/Fora/card-design-progress.png"} target="_blank" rel="noreferrer" aria-label="View plant card design iterations at full size (opens in a new tab)">
+          <a
+            href={"/Fora/card-design-progress.png"}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="View plant card design iterations at full size (opens in a new tab)"
+          >
             <img
               src="/Fora/card-design-progress.png"
               alt="Five plant card layouts exploring the placement of plant names, edibility labels, photos, and confidence scores"
@@ -122,11 +139,16 @@ export default function Page() {
         </figure>
         <p>
           The logo started with sketches by hand. Once I had settled on a
-          direction, I used GPT to turn the concept into a digital image,
-          keeping my original idea as the starting point.
+          direction, I used GPT to create a digital version based on my original
+          idea.
         </p>
-        <figure className="case-study-figure fora-logo">
-          <a href={"/Fora/logo.png"} target="_blank" rel="noreferrer" aria-label="View the logo design process at full size (opens in a new tab)">
+        <figure className="case-study-figure case-study-narrow fora-logo">
+          <a
+            href={"/Fora/logo.png"}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="View the logo design process at full size (opens in a new tab)"
+          >
             <img
               src="/Fora/logo.png"
               alt="Fora logo development, from hand-drawn sketches to digital versions featuring a plant inside a magnifying glass"
@@ -135,12 +157,51 @@ export default function Page() {
               loading="lazy"
             />
           </a>
-          <figcaption>From hand-drawn ideas to a digital logo generated with GPT.</figcaption>
+          <figcaption>
+            Logo design: from hand-drawn ideas to a digital identidy.
+          </figcaption>
         </figure>
+      </section>
+      <section aria-labelledby="technical-solutions">
+        <h2 id="technical-solutions">Technical Solutions & Key Challenges</h2>
+        <p>
+          I built Fora with TypeScript and Vite (before learning React and
+          Next.js), separating screen components, API requests, and response
+          mapping in a clear file structure. A central controller coordinates
+          navigation and keeps captured photos available when users need to
+          improve a match. I used TypeScript types and mapping functions to turn
+          data from the three APIs into a consistent format for the interface.
+        </p>
+        <h3>Handling uncertain identification</h3>
+        <p>
+          During MVP testing, I've found that a single photo does not always
+          produce a match, so I set a 20% confidence threshold, Fora asks for
+          another photo while preserving earlier images for the next request.
+          This threshold controls the interface flow; it does not establish that
+          a plant is safe to eat.
+        </p>
+        <h3>Reducing wait times</h3>
+        <p>
+          The results screen sometimes took 5 to 20 seconds to appear. To reduce
+          the wait, I show plant candidates first, then load edibility
+          information and Norwegian names at the same time. Each card updates as
+          the information arrives.
+        </p>
+
+        <h3>Handling missing information</h3>
+        <p>
+          If edibility information cannot be loaded, the card shows “unknown.”
+          If no Norwegian name is found, it still shows the scientific name. If
+          the app cannot access the user's location, it searches Pl@ntNet's
+          worldwide plant collection instead of a regional one.
+        </p>
       </section>
       <section aria-labelledby="demo-video">
         <h2 id="demo-video">Product Presentation</h2>
-        <p>Watch Fora in action, from identifying a plant to exploring its edibility information.</p>
+        <p>
+          Watch Fora in action, from identifying a plant to exploring its
+          edibility information.
+        </p>
         <video
           src="/Fora/fora-walk-through.webm"
           className="demo-video"
@@ -152,36 +213,40 @@ export default function Page() {
       </section>
       <section>
         <h2>Final Thoughts</h2>
-        <ul className="fora-final-thoughts">
+        <ul className="case-study-list">
           <li>
             I experienced the full product cycle: identifying a pain point,
             defining the problem, designing, building, integrating APIs,
             deploying, and testing and iterating.
           </li>
           <li>
-            Poor signal in the forest made offline access a clear priority
-            for the next version.
+            Poor signal in the forest made offline access a clear priority for
+            the next version.
           </li>
           <li>
             Working with LLMs taught me to question their accuracy. A curated
-            database of local edible plants could provide a more reliable
-            source for future versions.
+            database of local edible plants could provide a more reliable source
+            for future versions.
           </li>
           <li>
-            I set the MVP’s identification confidence threshold at 20% to show
+            I set the MVP's identification confidence threshold at 20% to show
             more potential matches. This is a low threshold, not a safety
             rating, and needs further evaluation.
           </li>
           <li>
-            A save feature would let me revisit discoveries and gradually
-            become more familiar with local species.
+            A save feature would let me return to plants I've found and get to
+            know local species over time.
           </li>
         </ul>
       </section>
 
       <footer className="case-study-footer">
-        <Link className="back-link" href="/#projects">← Back to projects</Link>
-        <a className="back-link" href="#top">Back to top ↑</a>
+        <Link className="back-link" href="/#projects">
+          ← Back to projects
+        </Link>
+        <a className="back-link" href="#top">
+          Back to top ↑
+        </a>
       </footer>
     </article>
   );

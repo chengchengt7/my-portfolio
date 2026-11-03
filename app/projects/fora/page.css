@@ -2,13 +2,6 @@
 
 @layer pages {
   .fora-case-study {
-    .fora-eyebrow {
-      color: var(--color600);
-      font-size: 1rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-    }
-
     .fora-screenshots {
       display: grid;
       grid-template-columns: repeat(5, minmax(9rem, 1fr));
@@ -27,45 +20,17 @@
       scroll-snap-align: start;
     }
 
-    .fora-final-thoughts {
-      max-width: var(--case-study-text-max-inline-size);
-      margin-inline: auto;
-      padding-inline-start: 1.4rem;
-      list-style: disc;
-      font-size: 1.125rem;
-      line-height: 1.75;
-    }
-
-    .fora-final-thoughts li {
-      margin-block-end: 1rem;
-    }
-
     .fora-introduction-image {
       margin-block-end: 3rem;
-    }
-
-    .fora-introduction-image img {
-      width: var(--case-study-text-max-inline-size);
-      margin-inline: auto;
     }
 
     .fora-flow-chart {
       margin-block-start: 2rem;
     }
 
-    .fora-logo {
-      max-width: var(--case-study-text-max-inline-size);
-      margin-inline: auto;
-    }
-
     .fora-design-image,
     .fora-logo {
       margin-block: 2rem 3rem;
-    }
-
-    .fora-introduction-actions {
-      max-width: var(--case-study-text-max-inline-size);
-      margin: 2rem auto;
     }
 
   }

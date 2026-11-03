@@ -41,12 +41,12 @@ export default function ProjectCard({
         <div className="project-actions">
           {actions.map(({ label, href, variant = "primary" }) => (
             href.startsWith("/projects/") ? (
-              <Link className={`button ${variant}`} href={href} key={`${label}-${href}`}>
+              <Link className={`button${variant === "secondary" ? " secondary" : ""}`} href={href} key={`${label}-${href}`}>
                 {label}
               </Link>
             ) : (
             <a
-              className={`button ${variant}`}
+              className={`button${variant === "secondary" ? " secondary" : ""}`}
               href={href}
               target="_blank"
               rel="noreferrer"

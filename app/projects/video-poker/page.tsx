@@ -21,7 +21,7 @@ export default function Page() {
           A school project working with components, shared state, and game logic
           in React, TypeScript and Zustand.
         </p>
-        <div className="poker-actions">
+        <div className="case-study-actions">
           <a
             className="button"
             href="https://video-poker-game.vercel.app/"
@@ -41,7 +41,7 @@ export default function Page() {
         </div>
       </header>
 
-      <figure className="case-study-figure poker-hero">
+      <figure className="case-study-figure">
         <img
           src="/video-poker/deal%20with%20match.png"
           alt="A straight held before the draw, with the matching payout highlighted"
@@ -87,7 +87,7 @@ export default function Page() {
           helped me understand which state belongs in a shared store and which
           can stay inside a component.
         </p>
-        <figure className="case-study-figure poker-narrow">
+        <figure className="case-study-figure case-study-narrow">
           <img
             src="/video-poker/players.png"
             alt="Player selection showing saved credit balances and the active player"
@@ -112,7 +112,7 @@ export default function Page() {
           the bet. If any of these checks fail, nothing changes and the player
           cannot deal.
         </p>
-        <figure className="poker-code">
+        <figure className="case-study-code case-study-narrow">
           <figcaption>
             <a href="https://github.com/chengchengt7/school-260910-video-poker/blob/main/src/stores/GlobalStore.ts">
               GlobalStore.ts
@@ -147,7 +147,7 @@ export default function Page() {
           replaced from that saved deck. Taking the next card each time means a
           card cannot be dealt twice in the same round.
         </p>
-        <figure className="poker-code">
+        <figure className="case-study-code case-study-narrow">
           <figcaption>
             <a href="https://github.com/chengchengt7/school-260910-video-poker/blob/main/src/stores/GlobalStore.ts">
               GlobalStore.ts
@@ -209,7 +209,7 @@ export default function Page() {
           render its rows. The function below looks up the winnings in that same
           array.
         </p>
-        <figure className="poker-code">
+        <figure className="case-study-code case-study-narrow">
           <figcaption>
             <a href="https://github.com/chengchengt7/school-260910-video-poker/blob/main/src/game/payouts.ts">
               payouts.ts

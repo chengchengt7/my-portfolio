@@ -48,7 +48,7 @@ export const projects: Project[] = [
     mediaPosition: "right",
     skills: ["TypeScript", "Product design", "API integration", "Gemini API"],
     description:
-      "Discover edible wild plants around you! Perfect for foragers and wild-food enthusiasts.",
+      "Discover edible wild plants around you! Identify plants from photos and explore their edibility, preparation, and precautions - Perfect for foragers and wild-food enthusiasts.",
     media: (
       <div className="fora-showcase">
         <video
