@@ -13,7 +13,7 @@ export default function Page() {
         />
         <section className="about-bio" aria-labelledby="about-heading">
           <p>
-            Hi, I'm Chengcheng, a front-end developer with a designer's eye. I
+            Hi, I'm Chengcheng Teng, a frontend developer & product designer. I
             love turning ideas into working interfaces, bringing design and code
             together to create digital experiences that feel{" "}
             <span className="highlight">clear, intuitive, and human.</span>
@@ -27,27 +27,23 @@ export default function Page() {
             <a href="https://gokstadakademiet.no/">
               <i>Gokstad Akademiet</i>
             </a>
-            , graduating in 2027. Through projects built with TypeScript, React,
-            Next.js, and Payload CMS, I'm extending my design experience into
-            technical solutions, turning ideas into application logic,
-            connecting data and services, and building functional web
-            experiences.
+            , graduating in 2027.
           </p>
           <p>
-            I've had a variety of work experience. From restaurants to
-            architecture studio, from fitness instructor to design role for the
-            fitness brand. I've also built an online business with a million
-            subscribers. Across these different fields and experiences, I've
-            gained a broad perspective on what makes a great product:{" "}
+            I'm passionate about the entire development process—from{" "}
             <span className="highlight">
-              understand a real need, create something useful, help it reach
-              people, and refine it through feedback.{" "}
+              understanding user needs and exploring ideas to building
+              solutions, testing them, and continuously improving them through
+              feedback.
             </span>
           </p>
           <p>
-            I'm passionate about finding technical solutions that make a product
-            easier to use. For me, the most rewarding part is seeing thoughtful code
-            become an experience that feels simple, intuitive, and natural.
+            I'm driven by curiosity and a desire to understand not just how
+            things work, but why they're built that way. I question assumptions,
+            challenge conventional approaches, and enjoy finding simpler,
+            smarter solutions. I bring both a critical eye for user experience
+            and a practical mindset for building software that's intuitive,
+            maintainable, and scalable.
           </p>
         </section>
       </div>
