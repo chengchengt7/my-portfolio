@@ -30,12 +30,12 @@ export default function Page() {
             , graduating in 2027.
           </p>
           <p>
-            I'm passionate about the entire development process—from{" "}
+            I'm passionate about the entire development process — from{" "}
             <span className="highlight">
-              understanding user needs and exploring ideas to building
-              solutions, testing them, and continuously improving them through
-              feedback.
+              understanding user needs and exploring ideas to designing,
+              building, testing, and refining solutions{" "}
             </span>
+            that make a real difference.
           </p>
           <p>
             I'm driven by curiosity and a desire to understand not just how
